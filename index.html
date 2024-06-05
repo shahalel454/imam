@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>جامعة الإمام محمد بن سعود الإسلامية</title>
+    <link href="assets/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="assets/css/login.css" rel="stylesheet">
+	<link rel="icon" href="assets/img/download.jpeg" type="image/jpeg">
+    <script src="assets/libs/jquery-3.6.0/jquery-3.6.0.js"></script>
+</head>
+<body class="login-portal layout authentication-portal-layout" onload="checkSessionKey()">
+    <main class="flex-shrink-0">
+        <div class="container-fluid">
+            <div class="row login-container">
+                <div class="col-sm-6 login-side-bg d-none d-md-block"></div>
+                <div class="col-md-6 col-lg-6 col-xl-5 col-sm-12 col-12">
+                    <form class="ui large form" action="../commonauth" method="post" id="loginForm">
+                        <div class="ui visible negative message" style="display: none;" id="error-msg"></div>
+                        <h1 class="h3 mb-3">تسجيل الدخول</h1>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">اسم المستخدم</label>
+                            <input type="text" id="usernameUserInput" class="form-control" value="" name="usernameUserInput" tabindex="1" placeholder="اسم المستخدم" required>
+                            <i aria-hidden="true" class="user icon"></i>
+                            <input id="username" name="username" type="hidden" value="null">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">كلمة المرور</label>
+                            <input type="password" id="password" class="form-control" name="password" value="" autocomplete="off" tabindex="2" placeholder="كلمة المرور">
+                            <i aria-hidden="true" class="lock icon"></i>
+                        </div>
+                        <div class="text-center">				
+                            <button class="login-btn-user btn btn-lg btn-primary login-btn" type="submit" onclick="redirectToSecondPage()">تسجيل الدخول</button>
+                            <button class="login-btn-user btn btn-lg btn-primary " type="button" onclick="passwordRecoverLink.click()">نسيت كلمة المرور</button>
+                        </div>
+                        <div class="field">
+                            <div style='background-color:yellow;'>
+                                <label>عزيزي الطالب/ ـة,, لتقديم خدمات أفضل وأسهل تم تغيير اسم المستخدم الخاص بجامعة الإمام الى الرقم الجامعي  وفي حال الرغية بإعادة ضبط كلمة المرور من خلال<a href='http://iu.sa/Mw47X'> اضغط هنا </a></label>
+                            </div>
+                        </div>
+                        <input type="hidden" name="sessionDataKey" value='31119ffb-a87a-44fe-82f9-c8509890ea47'>
+                    </form>
+                    <a class="d-none" id="passwordRecoverLink" tabindex="6" href="https://imamu.edu.sa/Pages/CreateUser.aspx" data-testid="login-page-password-recovery-button">كلمة المرور</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-auto py-3">
+        <div class="container">
+            جميع الحقوق محفوظة لجامعة الإمام محمد بن سعود الإسلامية 1444 هـ - 2022 م
+        </div>
+    </footer>
+    <script src="assets/libs/theme/semantic.min.js"></script>
+    <!-- Your other scripts here -->
+	<script>
+        function redirectToSecondPage() {
+            window.location.href = "second_page.html";
+        }
+    </script>
+</body>
+</html>

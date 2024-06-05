@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الدرجات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #007b8b;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .username {
+            font-size: 18px;
+        }
+        .header .settings-icon {
+            font-size: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .details div {
+            flex: 1;
+            margin: 0 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .details div:first-child {
+            margin-right: 0;
+        }
+        .details div:last-child {
+            margin-left: 0;
+        }
+        .details .title-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        .circle {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 2px solid black;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 14px;
+            background-color: white;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .search-box {
+            display: flex;
+            align-items: left;
+            justify-content: flex-start;
+            width: 50%;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-left: 20px;
+        }
+        .search-icon {
+            font-size: 20px;
+        }
+        .search-container span {
+            font-size: 18px;
+            margin-right: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="username">
+            شهاليل بنت عائد بن نويران الغلوى الحربي
+        </div>
+        <div class="settings-icon">
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h2>عرض الدرجات</h2>
+            <button>دبلوم</button>
+        </div>
+        <div class="details">
+            <div>
+                <strong>ملخص المعدل</strong>
+				<a href="#">عرض التفاصيل</a>
+                <p>الفصل الدراسي: 0.00</p>
+                <p>الجامعي: 3.88</p>
+                <p>تحويل: -</p>
+                <p>إجمالي: 3.88</p>
+            </div>
+            <div>
+                <div class="details">
+                    <strong>الخطة الدراسية الرئيسية</strong>
+                    <a href="#">عرض التفاصيل</a>
+                </div>
+                <p>المرحلة: الدبلوم</p>
+                <p>الكلية: الكلية التطبيقية</p>
+                <p>الدرجة العلمية: الدبلوم المتوسط</p>
+                <p>البرنامج: دبلوم الأمن السيبراني</p>
+            </div>
+        </div>
+        <div class="search-container">
+            
+            <div class="search-box">
+			<span>أعمال المقرر</span>
+                
+            </div>
+			<div class="search-box">
+			<input type="text" placeholder="البحث باستخدام اسم المقرر أو رمز المادة (OPTION+Y)">
+                <i class="fas fa-search search-icon"></i>
+        </div>
+		</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>المادة</th>
+                        <th>اسم المقرر</th>
+                        <th>الفرع</th>
+                        <th>الدرجة النهائية</th>
+                        <th>ساعات المعدل</th>
+                        <th>النقاط</th>
+                        <th>الرقم</th>
+                        <th>الإجراء</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0204.سير F21</td>
+                        <td>أمن أنظمة التشغيل</td>
+                        <td>003</td>
+                        <td><span class="circle">ب</span></td>
+                        <td>4.000</td>
+                        <td>16.00</td>
+                        <td>23772</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0201.سير F21</td>
+                        <td>إدارة المخاطر</td>
+                        <td>003</td>
+                        <td><span class="circle">أ</span></td>
+                        <td>3.000</td>
+                        <td>14.25</td>
+                        <td>23773</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0202.سير F21</td>
+                        <td>تهديدات الأمن السيبرانية</td>
+                        <td>003</td>
+                        <td><span class="circle">أ</span></td>
+                        <td>3.000</td>
+                        <td>6.00</td>
+                        <td>23774</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0203.سير F21</td>
+                        <td>التطوير الأمني للبرمجيات</td>
+                        <td>003</td>
+                        <td><span class="circle">+ب</span></td>
+                        <td>4.000</td>
+                        <td>10.00</td>
+                        <td>23775</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
